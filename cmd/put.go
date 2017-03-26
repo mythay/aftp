@@ -29,6 +29,7 @@ import (
 	"time"
 
 	"github.com/dutchcoders/goftp"
+	"github.com/mythay/anet"
 )
 
 var fUser, fPasswd, fDestdir, fLocalfile string
@@ -49,7 +50,7 @@ For example:
 		}
 		ips := make([]net.IP, 0, 255)
 		for _, arg := range args {
-			subips, err := parseIPRange(arg)
+			subips, err := anet.ParseIPRange(arg)
 			if err != nil {
 				return err
 			}

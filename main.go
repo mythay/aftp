@@ -14,7 +14,7 @@
 
 package main
 
-import "aftp/cmd"
+import "github.com/mythay/aftp/cmd"
 
 func main() {
 	cmd.Execute()
